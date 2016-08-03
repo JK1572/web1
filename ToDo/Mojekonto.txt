@@ -1,0 +1,19 @@
+Przyk³ad OLX/Allegro
+
+Funkcje z paska to odpowiednie podstrony 
+
+1. Moje oferty
+
+2. Skrzynka pocztowa
+
+3. Aktywne zlecenia
+
+4. Historia Zleceñ
+
+5. Mój profil
+
+6. Opinie
+
+7. Ustawienia
+
+

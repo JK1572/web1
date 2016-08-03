@@ -1,0 +1,8 @@
+tabelka do wyboru preferencji
+
+przyk³adowe oferty
+
+
+Pasek : "Moje konto" 1.niezalogowany (odnosnik do logowania) |  2. zalogowany (przechodzi do mojego konta)(wyjezdza pasek: funkcje mojego konta)
+
+	"Dodaj ofertê" 1.niezalogowany (odnosnik do logowania) |  2. zalogowany (przenosi do strony dodawania oferty)(wyjezdza pasek: 1 i 2 kategoria dodawania oferty)
