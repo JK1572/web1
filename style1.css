@@ -1,0 +1,75 @@
+﻿body
+{
+	background-color: #004420;
+}
+
+
+#gornyPanel
+{
+	width: 100%;
+	margin-left: 0px;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 100px;
+	
+}
+
+#logo
+{
+	width: 10%;
+	float: left;
+	height: 100px;
+}
+
+#banner
+{
+	width: 90%;
+	float: left;
+	height: 100px;
+	background-color: #412163;
+}
+
+
+#gornyBanner
+{
+	width: 100%;
+	height: 50px;
+	max-height: 50px;
+	background-color: #ffffff;
+	text-align: center;
+	
+}
+
+#dolnyBanner
+{
+	width: 100%;
+	height: 50px;
+	background-color: #ffee22;
+	text-align: center;
+}
+
+#formularz
+{
+	margin-left: 450px;
+	width: 400px;
+	height: 200px;
+	background-color: #ffff11;
+}
+
+.inputstyle
+{
+	width: 70px;
+}
+
+.inputborder
+{
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
