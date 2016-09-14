@@ -8,50 +8,61 @@
 
 </head>
 <body>
-
-	<div id = "gornyPanel">
-	
-		<div id = "logo"><img src="photo1.jpg" /></div>
+	<div id = "page">
+		<div id = "gornyPanel">
 		
-		<div id = "banner">
-			<div id = "gornyBanner">afafbsa</div>
+			<div id = "logo"><img src="photo1.jpg" width = "100%" height = "100%"/></div>
 			
-			
+			<div id = "banner">
+				<div id = "gornyBanner">afafbsa</div>
+				
+				
 				<ul>
 					<li class="dropdown">
-						<a href="#" class="dropbtn">Moje Konto >></a>
+						<a href="MojeKonto.html" class="dropbtn">Moje Konto >></a>
 						<div class="dropdown-content">
-							<a href="#">Moje Oferty</a>
-							<a href="#">Skrzynka Pocztowa</a>
-							<a href="#">Aktywne Zlecenia</a>
-							<a href="#">Historia Zleceń</a>
-							<a href="#">Mój Profil</a>
-							<a href="#">Opinie</a>
-							<a href="#">Ustawienia</a>
-	
+							<a href="MojeOferty.html">Moje Oferty</a>
+							<a href="Poczta.html">Skrzynka Pocztowa</a>
+							<a href="AktywneZlecenia.html">Aktywne Zlecenia</a>
+							<a href="HistoriaZlecen.html">Historia Zleceń</a>
+							<a href="MojProfil.html">Mój Profil</a>
+							<a href="Opinie.hmtl">Opinie</a>
+							<a href="Ustawienia.html">Ustawienia</a>
 						</div>
+					</li>
+					
+					<li class = "addbtn">
+						<a href="#dodajoferte"> Dodaj ofertę</a>
 					</li>
 				</ul>
 				
-			
+				
+			</div>
 		</div>
+		
+		
+		<div id = "formularz">
+		
+			<form>
+				<select type="text" class = "inputstyle2 inputborder"  placeholder="Wybierz usluge" />
+					<option value = "oferta" > Znajdz Ofertę </option>
+					<option value = "zapytanie" > Znajdz Zapytanie </option>
+				</select>
+				<br /> <br />
+				<input type = "text" class = "inputstyle2 inputborder" placeholder = "miasto" /> <input class = "inputstyle1 inputborder" type = "text" placeholder = "+km" />
+				<br /> <br />
+				<input class = "inputstyle1 inputborder" type="text" placeholder="Waga od" /> <input class = "inputstyle1 inputborder" type="text" placeholder="Waga do" />
+				<br /> <br />
+				
+				<input type = "submit" name = "szukaj" value = "szukaj"  id = "szukajForm"/>
+			</form>
+		
+		
+		
+		</div>
+	
 	</div>
 	
 	
-	<div id = "formularz">
-	
-		<form>
-			<input type="text" class = "inputstyle2 inputborder"  placeholder="Wybierz usluge" />
-			<br /> <br />
-			<input type = "text" class = "inputstyle2 inputborder" placeholder = "miasto" /> <input class = "inputstyle1 inputborder" type = "text" placeholder = "+km" />
-			<br /> <br />
-			<input class = "inputstyle1 inputborder" type="text" placeholder="Waga od" /> <input class = "inputstyle1 inputborder" type="text" placeholder="Waga do" />
-			<br /> <br />
-		</form>
-	
-	
-	
-	</div>
-
 </body>
 </html>
