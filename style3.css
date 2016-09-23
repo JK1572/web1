@@ -1,7 +1,7 @@
-﻿
-﻿body
+
+body
 {
-	background-color: #782525;
+	background-color: #fffff5;
 	}
 
 #page
@@ -63,6 +63,78 @@
 }
 
 
+.panelOgloszenie
+{
+	background-color: #cfcfcf;
+	width: 70%;
+	height: 200px;
+	border: solid black;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-left: 15%;
+
+}
+
+.zdjecie
+{
+	margin-top: 1%;
+	float: left;
+	height: 90%;
+	width: 30%;
+	background-color: yellow;
+}
+
+.zdjecieobok
+{
+	margin-top: 1%;
+	margin-left: 5%;
+	height: 90%;
+	width: 50%;
+	background-color: green;
+	float:left;
+	
+}
+
+
+
+
+.miasto
+{
+	
+	margin-top: 2%;
+	font-size: 40;
+}
+
+.kg
+{
+	
+	
+	margin-top: 20px;
+	float: right;
+	font-size: 20;
+	
+}
+
+
+.zasieg
+{
+	margin-top: 20px;
+	float: left;
+	font-size: 20;
+}
+
+
+
+.telefon
+{
+	margin-top: 20px;
+	clear: both;
+	font-size: 20;
+	float: left;
+}
+
+
+
 
 ul {
 	height: 50px;
@@ -119,8 +191,45 @@ li.dropdown {
 }
 
 
+#formularza
+{
+	
+	float: left;
+	background-color: #8A878C;
+	margin: auto;
+	margin-top: 40px ;
+	width: 300px;
+	height: 170px;
+	border: 3px solid black;
+	text-align: left;
+	padding: 10px;
+	border-radius: 12px;
+}
 
+.mojeKonto
+{
+	display:none;
+	color: #f2f2f2;
+	margin-top: 7px;
+	margin-left: 25%;
+	background-color: green;
+	font-size: 20px;
+	border-radius: 14px;
+	border: 1px solid green;
+	text-align: center;
+	width: 50%;
+	padding: 20px;
+	cursor: pointer;
+	
+}
 
+.mojeKonto:hover
+{
+	color: white;
+	background-color: #00e600;
+	box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.28);
+	transition-duration: 0.4s;
+}
 
 
 
@@ -142,7 +251,7 @@ li.dropdown {
 
 #szukajForm
 {
-	margin-left: 10px;
+	margin-left: 25%;
 	background-color: green;
 	font-size: 20px;
 	border-radius: 14px;
@@ -155,7 +264,7 @@ li.dropdown {
 	
 }
 
-  
+.
 
 #szukajForm:hover{
 	color: white;
@@ -192,7 +301,7 @@ li.dropdown {
 
 
 /*
-tabela w wyniku wyswietlania elementów bazy danych
+tabela w wyniku wyswietlania element�w bazy danych
 
 
 */
@@ -216,17 +325,5 @@ tr:nth-child(even) {
 
 
 
-#mojeKonto
-{
-	margin-left: 25%;
-	background-color: yellow;
-	font-size: 20px;
-	border-radius: 14px;
-	border: 1px solid green;
-	text-align: center;
-	width: 50%;
-	padding: 10px;
-	cursor: pointer;
-	
-}
+
 
