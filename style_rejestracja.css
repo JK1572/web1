@@ -1,12 +1,14 @@
-﻿body
+﻿  body
 {
-	background-color: #C3C3C3;
+	background-color: white;
 }
 #page
 {
-	width:980px ;
-	
-	
+	width:1000px ;
+	margin: auto;
+	background-color: #C3C3C3;
+	height: 100%;
+	min-height: 1000px;
 }
 
 #gornyPanel
@@ -14,35 +16,36 @@
 	width: 100%;
 	margin-left: 0px;
 	margin-right: auto;
-	margin-top: 5px;
+	margin-top: 1px;
 	margin-bottom: 5px;
-	height: 100px;
+	height: 140px;
 	
 }
 
+
 #logo
 {
-	width: 13%;
+	width: 265px;
+	height: 140px;
 	float: left;
-	height: 100px;
 }
 
 #banner
 {
-	width: 87%;
-	float: left;
-	height: 100px;
-	background-color: #412163;
+	width: 728px;
+	height: 140px;
+	float: right;
 }
 
 
 #gornyBanner
 {
-	width: 100%;
-	height: 50px;
-	max-height: 50px;
+	width:727;
+	height: 90px;
+	
 	background-color: #ffffff;
 	text-align: center;
+	
 	
 }
 
@@ -52,39 +55,221 @@
 	height: 50px;
 	background-color: #F87908;
 	text-align: center;
+	
 }
 
 
 #logowanie
 {
 	background-color: #8A878C;
-	margin-top: 80px ;
+	margin-top: 160px ;
 	margin-left: 60px;
-	width: 220px;
-	height: 140px;
-	border: 3px solid black;
+	width: 250px;
+	height: 100%;
+	border: 2px solid black;
 	text-align: center;
 	padding: 10px;
 	float: left;
 	border-radius: 12px;
+	
+}
+
+#blad
+{
+	margin-top: 10px;
+	color: red;
 	
 }
 
 #rejestracja
 {
 	background-color: #8A878C;
-	margin-top: 40px ;
-	margin-left: 210px;
+	margin-top: 50px ;
+	margin-left: 50px;
 	width: 350px;
-	height: 310px;
+	height: 630px;
 	border: 3px solid black;
 	text-align: center;
-	padding: 10px;
+	padding: 15px;
 	float: left;
 	border-radius: 12px;
 	
 }
 
+#regulamin
+{
+	float: left;
+}
+
+#g-recaptcha
+{
+	float: left;
+}
+
+#przycisk_rejestracji
+{
+	margin-top: 140px;
+	
+}
+
+#zawartosc
+{
+	float: left;
+	margin-left: 10px;
+	
+}
+
+#zawartosc2
+{
+	float:left;
+	
+	
+}
+
+#rejestracja_p
+{
+	
+	margin-left: auto;
+	
+}
+
+#send_to_registry
+{
+	border: 2px solid black;
+	border-radius: 12px;
+	background-color: #8A878C;
+	margin-top: 80px ;
+	margin-right:100px;
+	width: 300px;
+	height: 340px;
+	
+	text-align: center;
+	padding: 5px;
+	float: right;
+	
+	
+	
+}
+
+#oferta
+{
+	margin-top: 50px;
+	margin-left: 30px;
+	width: 930px;
+	height: 160px;
+	border: 2px solid black;
+	border-radius: 12px;
+	background-color: white;
+}
+#zdjecie
+{
+	float: left;
+	
+	
+}
+
+#dane
+{
+	float:left;
+	margin-top: 15px;
+	margin-left: 220px;
+	font-size: 20px;
+	width:200px;
+	
+	
+}
+
+
+
+#opis
+{
+	
+	
+	float:left;
+	margin-top: 30px;
+	margin-left: 90px;
+	height: 10px;
+	width: 170px;
+	font-size:15px;
+	
+}
+
+#kontakt
+{
+	 float:left;
+	margin-top: 90px;
+	margin-left: 50px;
+	height: 20px;
+	width: 100px;
+	 
+	
+}
+
+#ogloszenie_add
+{
+	width: 500px;
+	height: 850px;
+	border: 1px solid black;
+	border-radius: 12px;
+	margin: auto;
+	margin-top: 20px;
+	
+}
+#ogloszeniep_add
+{
+	width: 500px;
+	height: 900px;
+	border: 1px solid black;
+	border-radius: 12px;
+	margin: auto;
+	margin-top: 20px;
+	
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+	
+}
+input[type=text2], select {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 30px 100px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+	
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+	
+}
+#text
+{
+	font-size: 25px;
+	
+}
 
 .button
 {
@@ -95,7 +280,7 @@
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 15px;
+	font-size: 18px;
 	border-radius: 12px;
 }
 
@@ -112,7 +297,7 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  margin-left: 660px;
+  margin-left: 550px;
 }
 
 .button2 span {
@@ -140,5 +325,281 @@
   right: 0;
 }
 
+.error
+{
+	color: red;
+	
+}
 
 
+.button3 {
+  display: inline-block;
+  border-radius: 12px;
+  background-color: #F87908;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px;
+  width: 380px;
+  height: 190px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px;
+  margin-left:75px;
+  float: left;
+  margin-top: 150px;
+}
+
+.button3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button3 span:after {
+  content: '  >>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button3:hover span {
+  padding-right: 25px;
+}
+
+.button3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button4
+{
+	background-color: #F87908;
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	border-radius: 12px;
+	width: 220px;
+	margin-left:120px;
+	
+	
+}
+.button4 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button4 span:after {
+  content: '  >>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button4:hover span {
+  padding-right: 25px;
+}
+
+.button4:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+.button5
+{
+	background-color: #F87908;
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	border-radius: 12px;
+	width: 220px;
+	margin-left: 230px;
+	
+	
+}
+.button5 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button5 span:after {
+  content: '  >>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button5:hover span {
+  padding-right: 25px;
+}
+
+.button5:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.inputborder3
+{
+	border-radius: 12px;
+	width: 250px;
+	margin: auto;
+}
+.inputborder
+{
+	border-radius: 12px;
+	width: 260px;
+	margin-left: 121px;
+}
+
+#marka_model
+{
+	
+	width: 250px;
+	margin: auto;
+	
+}
+#r_ogl
+{
+	margin: auto;
+}
+#op
+{
+	margin-left: 80px;
+}
+
+textarea
+{
+	width: 300px;
+	height: 80px;
+	padding: 12px 20px;
+	border-radius: 12px;
+	background-color: #f8f8f8;
+	font-size: 16px;
+	resize: none;
+	margin: auto;
+}
+#zasieg_m
+{
+	width: 170px;
+	margin-left:100px;
+	float:left;
+}
+#zasieg_km
+{
+	width: 120px;
+	margin-left:10px;
+	float:left;
+}
+#r_cena
+{
+	width: 200px;
+	margin-left: 80px;
+	float: left;
+}
+#c_cena
+{
+	width: 130px;
+	margin-left: 20px;
+	float: left;
+}
+
+#add_photo
+{
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid black;
+	border-radius: 12px;
+	height: 150px;
+	width: 400px;
+}
+#nazwa_towar
+{
+	
+	width: 250px;
+	margin: auto;
+	
+}
+
+#start
+{
+	width: 200px;
+	margin-left: 40px;
+	float: left;
+}
+#cel
+{
+	width: 200px;
+	margin-left: 20px;
+	float: left;
+}
+
+#cena
+{
+	width: 130px;
+	margin-left: 40px;
+	float: left;
+}
+#waga
+{
+	width: 190px;
+	margin-left: 90px;
+	float: left;
+}
+#op_2
+{
+	margin-left: 70px;
+	
+	width: 160px;
+}
+#send_photos
+{
+	width: 200px;
+	margin: auto;
+}
+#a_o
+{
+	margin-left: 100 px;
+}
+
+#formularz
+{
+	width: 500px;
+	height: 700px;
+	margin: auto;
+	border: 1px solid black;
+	border-radius: 12px;
+	margin-top: 50px;
+	text-align: center;
+}
+#send_formularz
+{
+	margin: left;
+	
+}
+
+#a
+{
+	display: inline-block;
+}

@@ -1,0 +1,331 @@
+
+body
+{
+	background-color: #fffff5;
+	}
+
+#page
+{
+	width: 1000px;
+	height: 1200px;
+	margin: auto;
+	background-color: #C3C3C3;
+}
+#gornyPanel
+{
+	width: 100%;
+	margin-left: 0px;
+	margin-right: auto;
+	margin-top: 1px;
+	margin-bottom: 5px;
+	height: 140px;
+	
+}
+#logo
+{
+	width: 265px;
+	height: 140px;
+	float: left;
+}
+
+#banner
+{
+	width: 728px;
+	height: 140px;
+	float: right;
+}
+
+
+#gornyBanner
+{
+	width:727;
+	height: 90px;
+	
+	background-color: #ffffff;
+	text-align: center;
+	
+	
+}
+
+#dolnyBanner
+{
+	width: 100%;
+	height: 50px;
+	background-color: #F87908;
+	text-align: center;
+	
+}
+
+
+
+.inputborder
+{
+	border-radius: 5px;
+}
+
+
+.panelOgloszenie
+{
+	background-color: #cfcfcf;
+	width: 800px;
+	height: 200px;
+	border: solid black;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.zdjecie
+{
+	margin-top: 1%;
+	float: left;
+	height: 90%;
+	width: 30%;
+	background-color: yellow;
+}
+
+.zdjecieobok
+{
+	margin-top: 1%;
+	margin-left: 5%;
+	height: 90%;
+	width: 63%;
+	background-color: green;
+	float:left;
+	
+}
+
+
+
+
+.miasto
+{
+	
+	margin-top: 2%;
+	font-size: 40;
+}
+
+.kg
+{
+	
+	
+	margin-top: 20px;
+	float: right;
+	font-size: 20;
+	
+}
+
+
+.zasieg
+{
+	margin-top: 20px;
+	float: left;
+	font-size: 20;
+}
+
+
+
+.telefon
+{
+	margin-top: 20px;
+	clear: both;
+	font-size: 20;
+	float: left;
+}
+
+
+
+
+ul {
+	height: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F87908;
+}
+
+li
+{
+	float: right;
+}
+
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+	min-width: 160px;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: green;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: green;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #2f2f2f}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#formularza
+{
+	
+	float: left;
+	background-color: #8A878C;
+	margin: auto;
+	margin-top: 40px ;
+	width: 300px;
+	height: 170px;
+	border: 3px solid black;
+	text-align: left;
+	padding: 10px;
+	border-radius: 12px;
+}
+
+.mojeKonto
+{
+	display:none;
+	color: #f2f2f2;
+	margin-top: 7px;
+	margin-left: 25%;
+	background-color: green;
+	font-size: 20px;
+	border-radius: 14px;
+	border: 1px solid green;
+	text-align: center;
+	width: 50%;
+	padding: 20px;
+	cursor: pointer;
+	
+}
+
+.mojeKonto:hover
+{
+	color: white;
+	background-color: #00e600;
+	box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.28);
+	transition-duration: 0.4s;
+}
+
+
+
+#formularz
+{
+	
+	float: auto;
+	background-color: #8A878C;
+	margin: auto;
+	margin-top: 40px ;
+	width: 300px;
+	height: 170px;
+	border: 3px solid black;
+	text-align: left;
+	padding: 10px;
+	border-radius: 12px;
+}
+
+
+#szukajForm
+{
+	margin-left: 25%;
+	background-color: green;
+	font-size: 20px;
+	border-radius: 14px;
+	border: 1px solid green;
+	text-align: center;
+	width: 50%;
+	padding: 10px;
+	cursor: pointer;
+	
+	
+}
+
+.
+
+#szukajForm:hover{
+	color: white;
+	background-color: red;
+	box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.45);
+	transition-duration: 0.4s;
+}
+.inputstyle1
+{
+	width: 70px;
+}
+
+.inputstyle2
+{
+	width: 200px;
+}
+
+
+#ramkaWyniki
+{
+	margin-top: 40px;
+}
+
+
+
+
+.inputborder
+{
+	border-radius: 10px;
+}
+
+
+
+
+
+/*
+tabela w wyniku wyswietlania elementów bazy danych
+
+
+*/
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+
+
+
