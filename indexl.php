@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="style1.css" type="text/css" /> 
 	
 
+
 </head>
 
 
@@ -57,7 +58,7 @@ function showHint(str) {
 <body> 
 
 	
-	<div id = "page">
+	<div id = "page" >
 		<div id = "gornyPanel">
 		
 			<div id = "logo">
@@ -181,18 +182,19 @@ function showHint(str) {
 		if($rezultat = @$polaczenie->query("SELECT * FROM uslugi WHERE idogloszenia <= '$max2'"))
 		{
 			$liczbaogloszen = $rezultat->num_rows;
+			//$wiersz = $rezultat->fetch_assoc();
 			 
 			
 			while ($wiersz = mysqli_fetch_array($rezultat))
 			{
 				echo<<<END
 				<div class = "panelOgloszenie">
-					<div class = "zdjecie">Zdjecie</div>
+					<div class = "zdjecie"><img class="resize" src= "$wiersz[1]_PHOTO/$wiersz[0]_ID/$wiersz[0].jpg" alt="Zdjecie" ></div>
 					<div class = "zdjecieobok">
-						<div class = "miasto">$wiersz[6]</div>
-						<div class = "kg">cena: $wiersz[5]    </div>
+						<div class = "miasto">$wiersz[3]</div>
+						<div class = "kg">cena: $wiersz[0]    </div>
 						<div class = "zasieg">marka: $wiersz[3]    </div>
-						<div class = "telefon">telefon: $wiersz[2]    </div>
+						<div class = "telefon">telefon: $wiersz[4]    </div>
 					</div>
 					
 					

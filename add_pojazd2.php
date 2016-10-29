@@ -42,11 +42,8 @@ session_start();
 	</div>
 
 
-<div id="ogl">
-<form id = "firstform" method="post" action= "ogloszenie_add.php" enctype="multipart/form-data"  >
 
-<br/>
-<br/>
+<form id = "firstform" method="post" action= "ogloszenie_add2.php" enctype="multipart/form-data" >
 <br/>
 <?php
 		
@@ -59,8 +56,6 @@ session_start();
 		
 			?>
 <br/>
-<br/>
-<div id="marka_model";>
 <input type = "text" name = "Marka_model" class = "inputborder" placeholder="Podaj markę i model pojazdu" />
 <?php
 		
@@ -72,11 +67,7 @@ session_start();
 					}
 		
 			?>
-</div>
 <br/>
-<br/>
-<br/>
-<div id="r_cena" >
 <select type="text" class = "r_cena"   name = "r_ceny">
 					<option value = "fracht"  > Cena za fracht </option>
 					<option value = "kilometr"  > Cena za kilometr </option>
@@ -92,8 +83,6 @@ session_start();
 					}
 		
 			?>
-</div>
-<div id="c_cena">
 <input type = "number" name = "c_ceny" class = "c_cena" placeholder="Podaj cene" />
 <?php
 		
@@ -106,11 +95,6 @@ session_start();
 		
 ?>
 <br/>
-<br/>
-<br/>
-</div>
-
-<div id="zasieg_m" >
 <input type = "text" name= "Zasieg_m" class = "inputborder" placeholder="Podaj miasto">
 <?php
 		
@@ -122,8 +106,6 @@ session_start();
 					}
 		
 			?>
-</div>
-<div id="zasieg_km" >
 <select type="text" class = "zasieg_km"   name = "Zasieg_km">
 					<option value="" disabled select>+km</option>
 					<option value = "+5"  > +5 km </option>
@@ -149,12 +131,6 @@ session_start();
 ?>
 <br/>
 <br/>
-<br/>
-</div>
-<br/>
-<br/>
-<br/>
-<div id="op" >
 <textarea name="opis" placeholder="Opis (maksymalnie 100 znaków)"></textarea>
 <?php
 		
@@ -166,34 +142,16 @@ session_start();
 					}
 		
 			?>
-</div>
-<br/>
-<br/> 
-<br/>
+ <br/>
 
-
-<br/>
-
-
-
-
-
-
-<div id="send_photos">
 
 	Wybierz zdjęcia:
 		<input type="file" name="photo" id="zdjecieup">
 			
-		
-</div>
-
-<div id="send_button">
-<br/>
-<br/>
 <br/>
  <input type="submit" value="Dodaj ogloszenie" name="submit">
  
-</div>
+
 </form>
 
 

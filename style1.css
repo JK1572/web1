@@ -9,7 +9,7 @@
 	width: 1000px;
 	height: auto;
 	margin: auto;
-	background-color: #C3C3C3;
+	background-color: grey;
 }
 #gornyPanel
 {
@@ -362,8 +362,8 @@ tr:nth-child(even) {
 .panelOgloszenie
 {
 	background-color: #cfcfcf;
-	width: 800px;
-	height: 200px;
+	width: 950px;
+	height: 280px;
 	border: solid black;
 	border-radius: 10px;
 	margin-top: 50px;
@@ -374,17 +374,17 @@ tr:nth-child(even) {
 
 .zdjecie
 {
-	margin-top: 1%;
+	margin-top: 3%;
+	margin-left: 1%;
 	float: left;
-	height: 90%;
-	width: 30%;
-	background-color: yellow;
+	
+	
 }
 
 .zdjecieobok
 {
 	margin-top: 1%;
-	margin-left: 5%;
+	margin-left: 3%;
 	height: 90%;
 	width: 63%;
 	background-color: green;
@@ -431,4 +431,7 @@ tr:nth-child(even) {
 }
 
 
-
+img.resize{
+	width: 260px;
+	height: 200px;
+}

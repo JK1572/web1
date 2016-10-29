@@ -2,6 +2,12 @@
 
 session_start();
 
+
+
+$target_dir =  $_SESSION['id']."_PHOTO"."/";
+$target_file = $target_dir . basename($_FILES["photo"]["name"]);
+$upload_OK = 1;
+$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	
 
 	if(isset($_POST['Marka_model']))
@@ -57,7 +63,7 @@ session_start();
 	if(empty($_POST['opis']))
 	{
 		$wszystko_OK = false;
-		$_SESSION['e_opisbus']= "    Podaj krótki opis towaru!";
+		$_SESSION['e_opisbus']= "Podaj krótki opis towaru!";
 		header('Location:add_pojazd.php');
 	}
 	
@@ -116,51 +122,12 @@ session_start();
 		
 	
 	
-try
-		{
-			$polaczenie = new mysqli($host,$db_user,$db_password,$db_name);
-			
-			if($polaczenie->connect_errno!=0)
-				{
-					throw new Exception(mysqli_connect_errno());
-				
-				}
-		else
-				{
-					
-					$rezultat=$polaczenie->query("SELECT * FROM uslugi WHERE  iduser = '$userid' AND markamodel = '$marka_model' AND zasieg = '$zasieg' ");
-					
-					if(!$rezultat) throw new Exception($polaczenie->error);
-					
-					
-						
-				if($wszystko_OK==true)
-					{
-						$wiersz = $rezultat->fetch_assoc();
-						
-						$_SESSION['idogl'] = $wiersz['idogloszenia'];
-					}
-					
-					$rezultat->free_result();
-					$polaczenie->close();
-			}
-		}
-		catch(Exception $e)
-			{
-				
-				echo "Błąd serwera,przepraszamy za niedogodności".$e;
-			}
-		
-	
 
-	
-$directoryName = $_SESSION['id']."_PHOTO"."/".$_SESSION['idogl']."_ID"."/";		
-mkdir($directoryName, 0755);
+
 		
-$target_dir =  $_SESSION['id']."_PHOTO"."/".$_SESSION['idogl']."_ID"."/";
-$target_file = $target_dir . basename($_FILES["photo"]["name"]);
-$upload_OK = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+		
+		
+
 
 if(isset($_POST["submit"]))
 {
@@ -182,11 +149,10 @@ if(file_exists($target_file))
 				{
 						echo "Plik już istnieje";
 						$upload_OK = 0;
-						header('Location: add_pojazd');
-				
 				}
+
 //Sprawdz rozmiar
-if($_FILES["photo"]["size"] > 5000000)
+if($_FILES["photo"]["size"] > 500000)
 				{
 					echo "Przepraszamy, plik jest za duży";
 					$upload_OK = 0;
@@ -197,43 +163,27 @@ if($imageFileType != "jpg" && $imageFileType =! "png" && $imageFileType !="jpeg"
 {
 	echo "Przepraszamy, tylko pliki JPG, JPEG, PNG, GIF są dopuszczalne";
 	$upload_OK = 0;
-	header('Location: add_pojazd');
-				
 	
 }			
 
 if($upload_OK == 0 )
 {
 	echo "Przepraszamy,nie udało się załadowac pliku";
-	header('Location: add_pojazd');
-				
 }	
 else
 {
-	$temp = explode(".",$_FILES["photo"]["name"]);
-	$newfilename = $_SESSION['idogl'].".jpg";
-	
-	
-				if(move_uploaded_file($_FILES["photo"]["tmp_name"],$_SESSION['id']."_PHOTO"."/".$_SESSION['idogl']."_ID"."/".$newfilename	))
-				{
-					
-					//echo "The file". basename($_FILES["photo"] ["name"]). "został załadowany";
-					if($wszystko_OK==true)
-					{
-						header('Location: welcomedod.php '); 
-					}
-					else
-					{
-						header('Location: add_pojazd.php '); 
-					}
-				}
-				else
-				{
-					echo "nie udało się-dupa";
-				}
-	
-	
+	if(move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file))
+	{
+		echo "The file". basename($_FILES["photo"] ["name"]). "został załadowany";
+		header('Location: welcomedod.php ');
+	}
+	else
+	{
+		echo "nie udało się-dupa";
+	}
 }
 
-unset($_SESSION['idogl']);
+
+
+
 ?>
