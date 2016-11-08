@@ -9,45 +9,11 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Homepage</title>
-	<link rel="stylesheet" href="style3.css" type="text/css" /> 
+	<link rel="stylesheet" href="style1.css" type="text/css" /> 
 	
 
 </head>
 
-
-	
-
-
-<script>
-function showHint(str) {
-    if (str.length == 0) { 
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "gethint.php?q=" + str, true);
-        xmlhttp.send();
-    }
-}
-</script>
-
-<script>
-
-
-	
-	function changesrc()
-	{
-		
-		document.getElementById("ramkaWyniki2").src = "Wyswietl1.php";
-		
-	}
-	
-</script>
 <body> 
 
 	
@@ -55,13 +21,13 @@ function showHint(str) {
 		<div id = "gornyPanel">
 		
 			<div id = "logo">
-				<a href = "Homepage.php">
+				<a href = "index.php">
 					<img src="logo.jpg"  width = "100%" height = "100%"/>
 				</a>
 			</div>
 			
 			<div id = "banner">
-				<div id = "gornyBanner">afafbsa</div>
+				<div id = "gornyBanner"><img src="reklama.jpg"  width = "100%" height = "100%"/></div>
 				
 				
 				<ul>
@@ -120,7 +86,7 @@ function showHint(str) {
 			{
 				echo<<<END
 				<div class = "panelOgloszenie">
-					<div class = "zdjecie">Zdjecie</div>
+					<div class = "zdjecie"><img class="resize" src= "$wiersz[1]_PHOTO/$wiersz[0]_ID/$wiersz[0].jpg" alt="Zdjecie" ></div>
 					<div class = "zdjecieobok">
 						<div class = "miasto">$wiersz[6]</div>
 						<div class = "kg">cena: $wiersz[5]    </div>
@@ -158,7 +124,7 @@ END;
 			{
 				echo<<<END
 				<div class = "panelOgloszenie">
-					<div class = "zdjecie">Zdjecie</div>
+					<div class = "zdjecie"><img class="resize" src= "$wiersz[1]_PHOTO/$wiersz[0]_ID_OFERTY/$wiersz[0].jpg" alt="Zdjecie" ></div>
 					<div class = "zdjecieobok">
 						<div class = "miasto">$wiersz[3]</div>
 						<div class = "kg">cena: $wiersz[7]    </div>
@@ -183,6 +149,7 @@ END;
 				$liczbaogloszen2 = $liczbaogloszen2 - 1;
 			}
 	
+		
 		}
 
 
@@ -190,7 +157,9 @@ END;
 
 	?>
 		
-		
+		<br/>
+		<br/>
+		<br/>
 		
 		
 	</div>

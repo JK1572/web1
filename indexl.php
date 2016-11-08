@@ -25,36 +25,7 @@
 	
 
 
-<script>
-function showHint(str) {
-    if (str.length == 0) { 
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "gethint.php?q=" + str, true);
-        xmlhttp.send();
-    }
-}
-</script>
 
-<script>
-
-
-	
-	function changesrc()
-	{
-		
-		document.getElementById("ramkaWyniki2").src = "Wyswietl1.php";
-		
-	}
-	
-</script>
 <body> 
 
 	
@@ -62,18 +33,18 @@ function showHint(str) {
 		<div id = "gornyPanel">
 		
 			<div id = "logo">
-				<a href = "Homepage.php">
+				<a href = "index.php">
 					<img src="logo.jpg"  width = "100%" height = "100%"/>
 				</a>
 			</div>
 			
 			<div id = "banner">
-				<div id = "gornyBanner">afafbsa</div>
+				<div id = "gornyBanner"><img src="reklama.jpg"  width = "100%" height = "100%"/></div>
 				
 				
 				<ul>
 					<li class="dropdown">
-						<a href="MojeKonto.php" class="dropbtn">Moje Konto >></a>
+						<a href="MojeKonto.php" class="dropbtn">Moje konto &#x2193 </a>
 						<div class="dropdown-content">
 							<a href="moje_oferty.php">Moje Oferty</a>
 							<a href="moj_profil.php">Mój Profil</a>
@@ -108,21 +79,23 @@ function showHint(str) {
 		<div id = "formularz">
 		
 			<form action = "Wyswietl3.php" method = "Post" >
-				<select type="text" class = "inputstyle2 inputborder"  placeholder="Wybierz usluge" name = "usluga"/>
+			<div id="usl">
+				<select type="text" class="inputstyle4 inputborder " placeholder="Wybierz usluge" name = "usluga"/>
 					<option value = "oferta"  > Znajdz Ofertę </option>
-					<option value = "zapytanie" > Znajdz Zapytanie </option>
+					<option value = "zapytanie" > Znajdz Usługę </option>
 				</select>
+				</div>
 				<br /> <br />
 					<input type = "text" class = "inputstyle2 inputborder" placeholder = "miasto" name = "miasto" /> 
 					<input class = "inputstyle1 inputborder" type = "text" placeholder = "+km" name = "km" />
-				<br /> <br />
-					<input class = "inputstyle1 inputborder" type="text" placeholder="Waga od" name = "wagaod" /> 
+				
+					<input class = "inputstyle3 inputborder" type="text" placeholder="Waga od" name = "wagaod" /> 
 					<input class = "inputstyle1 inputborder" type="text" placeholder="Waga do" name = "wagado"/>
 				<br /> <br />
 				
 				<input type = "submit" name = "szukaj" value = "szukaj"  id = "szukajForm" onclick = "changesrc()"/>
 			</form>
-		<button onclick = "changesrc()">klik</button>
+		
 			
 		<br/>
 		<br/>
@@ -191,7 +164,7 @@ function showHint(str) {
 				<div class = "panelOgloszenie">
 					<div class = "zdjecie"><img class="resize" src= "$wiersz[1]_PHOTO/$wiersz[0]_ID/$wiersz[0].jpg" alt="Zdjecie" ></div>
 					<div class = "zdjecieobok">
-						<div class = "miasto">$wiersz[3]</div>
+						<div class = "miasto">miasto: $wiersz[5]</div>
 						<div class = "kg">cena: $wiersz[0]    </div>
 						<div class = "zasieg">marka: $wiersz[3]    </div>
 						<div class = "telefon">telefon: $wiersz[4]    </div>

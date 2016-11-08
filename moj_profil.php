@@ -18,50 +18,24 @@
 	
 
 
-<script>
-function showHint(str) {
-    if (str.length == 0) { 
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "gethint.php?q=" + str, true);
-        xmlhttp.send();
-    }
-}
-</script>
-
-<script>
 
 
-	
-	function changesrc()
-	{
-		
-		document.getElementById("ramkaWyniki2").src = "Wyswietl1.php";
-		
-	}
-	
-</script>
+
 <body> 
 
 	
-<div id = "page">
+<div id="page">
+
 		<div id = "gornyPanel">
 		
 			<div id = "logo">
-				<a href = "Homepage.php">
+				<a href = "index.php">
 					<img src="logo.jpg"  width = "100%" height = "100%"/>
 				</a>
 			</div>
 			
 			<div id = "banner">
-				<div id = "gornyBanner">afafbsa</div>
+				<div id = "gornyBanner"><img src="reklama.jpg"  width = "100%" height = "100%"/></div>
 				
 				
 				<ul>
@@ -77,6 +51,7 @@ function showHint(str) {
 					
 					<li class = "addbtn">
 						<a href="add.php"> Dodaj ofertę</a>
+						</div>
 						<?
 						
 	
@@ -95,7 +70,8 @@ function showHint(str) {
 				
 				
 			</div>
-		</div>
+		
+		
 		
 	<div id="dane">
 	
@@ -174,6 +150,6 @@ function showHint(str) {
 		<br/>
 		
 </div>
-	
+
 </body>
 </html>

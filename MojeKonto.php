@@ -9,7 +9,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>MojeKonto</title>
-	<link rel="stylesheet" href="style2.css" type="text/css" />
+	<link rel="stylesheet" href="style1.css" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	
 	

@@ -10,37 +10,80 @@ session_start();
 		
 
 ?>
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <html lang="pl">
 <head>
 	<meta charset="utf-8" />
 	<title>Homepage</title>
-	<link rel="stylesheet" href="style_rejestracja.css" type="text/css" />
+	<link rel="stylesheet" href="style1.css" type="text/css" /> 
 	
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-	
+
 </head>
 
-<body>
+
+	
 
 
+
+
+
+<body> 
+
+	
 <div id = "page">
-
-	<div id = "gornyPanel">
-		<div id = "logo"><img src="logo.jpg" /></div>
-		<div id = "banner">
-			<div id = "gornyBanner">Baner</div>
+		<div id = "gornyPanel">
+		
+			<div id = "logo">
+				<a href = "index.php">
+					<img src="logo.jpg"  width = "100%" height = "100%"/>
+				</a>
+			</div>
 			
-			
-			<div id = "dolnyBanner">
-				<button class="button2" style="vertical-align:middle"><span>Moje konto </span></button>
-
-			
+			<div id = "banner">
+				<div id = "gornyBanner"><img src="reklama.jpg"  width = "100%" height = "100%"/></div>
+				
+				
+				<ul>
+					<li class="dropdown">
+						<a href="MojeKonto.php" class="dropbtn">Moje Konto >></a>
+						<div class="dropdown-content">
+							<a href="moje_oferty.php">Moje Oferty</a>
+							<a href="moj_profil.php">Mój Profil</a>
+							<a href="ustawienia.php">Ustawienia</a>
+							<a href="logout.php">Wyloguj</a>
+						</div>
+					</li>
+					
+					<li class = "addbtn">
+						<a href="add.php"> Dodaj ofertę</a>
+					
+					</li>
+				</ul>
+				
+				
 			</div>
 		</div>
-	</div>
+		
+	
+	
+	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 <div id="ogl">
 <form id = "firstform" method="post" action= "ogloszenie_add.php" enctype="multipart/form-data"  >
@@ -60,8 +103,8 @@ session_start();
 			?>
 <br/>
 <br/>
-<div id="marka_model";>
-<input type = "text" name = "Marka_model" class = "inputborder" placeholder="Podaj markę i model pojazdu" />
+<div id="marka_model">
+<input type = "number_1" name = "Marka_model" class = "inputborder_1" placeholder="Podaj markę i model pojazdu" />
 <?php
 		
 				if(isset($_SESSION['e_marka_model']))
@@ -94,7 +137,7 @@ session_start();
 			?>
 </div>
 <div id="c_cena">
-<input type = "number" name = "c_ceny" class = "c_cena" placeholder="Podaj cene" />
+<input type = "number_1" name = "c_ceny" class = "c_cena" placeholder="Podaj cene" />
 <?php
 		
 				if(isset($_SESSION['e_ccena']))
@@ -111,7 +154,7 @@ session_start();
 </div>
 
 <div id="zasieg_m" >
-<input type = "text" name= "Zasieg_m" class = "inputborder" placeholder="Podaj miasto">
+<input type = "number_1" name= "Zasieg_m" class = "inputborder_1" placeholder="Podaj miasto">
 <?php
 		
 				if(isset($_SESSION['e_zasiegm']))
@@ -124,7 +167,7 @@ session_start();
 			?>
 </div>
 <div id="zasieg_km" >
-<select type="text" class = "zasieg_km"   name = "Zasieg_km">
+<select type="text_1" class = "zasieg_km"   name = "Zasieg_km">
 					<option value="" disabled select>+km</option>
 					<option value = "+5"  > +5 km </option>
 					<option value = "+10" >  +10 km </option>
