@@ -27,7 +27,7 @@
 	
 	Dziękujemy za rejestracje w  serwisie <br/> <br/>
 	
-	<a href="Rejestracja.php">Zaloguj się na swoje konto!</a>
+	<a href="logowanie.php">Zaloguj się na swoje konto!</a>
 
 
 </body>

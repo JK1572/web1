@@ -135,39 +135,54 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Rozwiazywanie problemu</title>
-	<link rel="stylesheet" href="style_rejestracja.css" type="text/css" />
+	<link rel="stylesheet" href="style1.css" type="text/css" />
 	
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	
 </head>
 <body>
 
-<div id ="page">
-	<div id = "gornyPanel">
-		<div id = "logo"><img src="logo.jpg" /></div>
-		<div id = "banner">
-			<div id = "gornyBanner">Baner</div>
-			
-			
-			<div id = "dolnyBanner">
-				<button class="button2" style="vertical-align:middle"><span>Moje konto </span></button>
 
+	<div id = "page" >
+		<div id = "gornyPanel">
+		
+			<div id = "logo">
+				<a href = "index.php">
+					<img src="logo.jpg"  width = "100%" height = "100%"/>
+				</a>
+			</div>
 			
+			<div id = "banner">
+				<div id = "gornyBanner"><img src="reklama.jpg"  width = "100%" height = "100%"/></div>
+				
+				
+				<ul>
+					<li class="dropdown">
+					
+						<a href="logowanie.php" class="dropbtn">Moje konto &#x2193 
+						
+						</a>
+					</li>
+					
+					<li class = "addbtn">
+						<a href="logowanie.php"> Dodaj ofertę</a>
+						
+					</li>
+				</ul>
+				
+				
 			</div>
 		</div>
-	</div>
-
-<div/>
 
 
-	
+	<div id="clear"></div>
 <div id = "rejestracja" >
 	
 	<form method="post">
 	
 		<div id="zawartosc">
 	
-		<input type="text"  name="Rodzaj_konta" class="inputborder" placeholder="Rodzaj konta" />
+		<input type="number_1"  name="Rodzaj_konta" class="inputborder" placeholder="Rodzaj konta" />
 		<br/>
 		<?php
 		
@@ -180,7 +195,7 @@
 			?>
 		<br/>
 		<br/>
-		<input type="text" name="Email" class="inputborder" placeholder="adres e-mail" />
+		<input type="number_1" name="Email" class="inputborder" placeholder="adres e-mail" />
 		<br/>
 				<?php
 		
@@ -279,13 +294,13 @@
 		</div>
 		
 		
-	<form/>
+	</form>
 		
 			
 </div>
 
+</div>
 
-<div id="zawartosc_2"
 	
 
 </body>

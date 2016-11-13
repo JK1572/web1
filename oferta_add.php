@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 session_start();
 
@@ -69,6 +69,7 @@ session_start();
 		{
 			$polaczenie = new mysqli($host,$db_user,$db_password,$db_name);
 			
+			
 			if($polaczenie->connect_errno!=0)
 				{
 					throw new Exception(mysqli_connect_errno());
@@ -76,6 +77,8 @@ session_start();
 				}
 		else
 				{
+					//mysql_query("SET CHARSET utf8");
+					//mysql_query("SET NAMES 'utf8' COLLATE 'utf8_polish_ci'"); 
 					
 					$rezultat=$polaczenie->query("SELECT * FROM oferty WHERE  iduser = '$user_id' AND nazwatowaru = '$nazwa_tow'");
 					
@@ -85,6 +88,7 @@ session_start();
 					if($ile_takich_ogloszen>0)
 					{
 						$wszystko_OK=false;
+						
 				
 						$_SESSION['e_ogloszenie']="Takie ogloszenie juz istnieje";
 						header('Location: add_towar.php');
@@ -115,6 +119,128 @@ session_start();
 			}
 		
 	
+	
+	try
+		{
+			$polaczenie = new mysqli($host,$db_user,$db_password,$db_name);
+			
+			if($polaczenie->connect_errno!=0)
+				{
+					throw new Exception(mysqli_connect_errno());
+				
+				}
+		else
+				{
+					
+					$rezultat=$polaczenie->query("SELECT * FROM oferty WHERE  iduser = '$user_id' AND nazwatowaru = '$nazwa_tow' AND opis = '$opis_towaru' ");
+					
+					if(!$rezultat) throw new Exception($polaczenie->error);
+					
+					
+						
+				if($wszystko_OK==true)
+					{
+						$wiersz = $rezultat->fetch_assoc();
+						
+						$_SESSION['idofer'] = $wiersz['idogloszen'];
+					}
+					
+					$rezultat->free_result();
+					$polaczenie->close();
+			}
+		}
+		catch(Exception $e)
+			{
+				
+				echo "Błąd serwera,przepraszamy za niedogodności".$e;
+			}
+		
+	
+
+	
+$directoryName = $_SESSION['id']."_PHOTO"."/".$_SESSION['idofer']."_ID_OFERTY"."/";		
+mkdir($directoryName, 0755);
+		
+$target_dir =  $_SESSION['id']."_PHOTO"."/".$_SESSION['idofer']."_ID_OFERTY"."/";
+$target_file = $target_dir . basename($_FILES["photo"]["name"]);
+$upload_OK = 1;
+$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
+if(isset($_POST["submit"]))
+{
+	$check = getimagesize($_FILES["photo"]["tmp_name"]);
+		if($check !== false)
+				{
+					echo "File is an image -" . $check["mime"] . ".";
+					$upload_OK = 1;
+				}
+		else
+				{
+					echo "File is not image.";
+					$upload_OK = 0;
+				}
+			
+}
+
+if(file_exists($target_file))
+				{
+						echo "Plik już istnieje";
+						$upload_OK = 0;
+						header('Location: add_pojazd');
+				
+				}
+//Sprawdz rozmiar
+if($_FILES["photo"]["size"] > 5000000)
+				{
+					echo "Przepraszamy, plik jest za duży";
+					$upload_OK = 0;
+				}
+//Typ pliku
+if($imageFileType != "jpg" && $imageFileType =! "png" && $imageFileType !="jpeg"
+&& $imageFileType != "gif")
+{
+	echo "Przepraszamy, tylko pliki JPG, JPEG, PNG, GIF są dopuszczalne";
+	$upload_OK = 0;
+	header('Location: add_towar');
+				
+	
+}			
+
+if($upload_OK == 0 )
+{
+	echo "Przepraszamy,nie udało się załadowac pliku";
+	header('Location: add_towar');
+				
+}	
+else
+{
+	$temp = explode(".",$_FILES["photo"]["name"]);
+	$newfilename = $_SESSION['idofer'].".jpg";
+	
+	
+				if(move_uploaded_file($_FILES["photo"]["tmp_name"],$_SESSION['id']."_PHOTO"."/".$_SESSION['idofer']."_ID_OFERTY"."/".$newfilename	))
+				{
+					
+					//echo "The file". basename($_FILES["photo"] ["name"]). "został załadowany";
+					if($wszystko_OK==true)
+					{
+						header('Location: welcomedod.php '); 
+					}
+					else
+					{
+						header('Location: add_towar.php '); 
+					}
+				}
+				else
+				{
+					echo "nie udało się-dupa";
+				}
+	
+	
+}
+
+unset($_SESSION['idofer']);
+?>
 	
 
 

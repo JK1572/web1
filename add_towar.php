@@ -9,46 +9,75 @@ session_start();
 	
 
 ?>
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <html lang="pl">
 <head>
 	<meta charset="utf-8" />
 	<title>Homepage</title>
-	<link rel="stylesheet" href="style_rejestracja.css" type="text/css" />
+	<link rel="stylesheet" href="style1.css" type="text/css" /> 
 	
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-	
+
 </head>
 
-<body>
-
-<div id = "page">
-
-	<div id = "gornyPanel">
-		<div id = "logo"><img src="logo.jpg" /></div>
-		<div id = "banner">
-			<div id = "gornyBanner">Baner</div>
-			
-			
-			<div id = "dolnyBanner">
-				<button class="button2" style="vertical-align:middle"><span>Moje konto </span></button>
-
-			
-			</div>
-		</div>
-	</div>
-
 
 	
-<form id = "ogloszenie_add" method="post" action = "oferta_add.php" >
+
+
+
+
+
+<body> 
+
+	
+<div id = "page">
+		<div id = "gornyPanel">
+		
+			<div id = "logo">
+				<a href = "index.php">
+					<img src="logo.jpg"  width = "100%" height = "100%"/>
+				</a>
+			</div>
+			
+			<div id = "banner">
+				<div id = "gornyBanner"><img src="reklama.jpg"  width = "100%" height = "100%"/></div>
+				
+				
+				<ul>
+					<li class="dropdown">
+						<a href="MojeKonto.php" class="dropbtn">Moje Konto >></a>
+						<div class="dropdown-content">
+							<a href="moje_oferty.php">Moje Oferty</a>
+							<a href="moj_profil.php">Mój Profil</a>
+							<a href="ustawienia.php">Ustawienia</a>
+							<a href="logout.php">Wyloguj</a>
+						</div>
+					</li>
+					
+					<li class = "addbtn">
+						<a href="add.php"> Dodaj ofertę</a>
+					
+					</li>
+				</ul>
+				
+				
+			</div>
+		</div>
+		
+	
+	
+	
+
+	
+
+	
+<form id = "ogloszenie_add" method="post" action = "oferta_add.php" enctype="multipart/form-data" >
 
 
 <br/>
 <br/>
 <br/>
 <div id="nazwa_towar";>
-<input type = "text" name = "Nazwa_towaru" class = "inputborder" placeholder="Nazwa towaru" />
+<input type = "number_1" name = "Nazwa_towaru" class = "inputborder_1" placeholder="Nazwa towaru" />
 <br/>
 <?php
 		
@@ -76,7 +105,7 @@ session_start();
 <br/>
 <br/>
 <div id="start" >
-<input type = "text" name = "Miejsce_startu" class = "inputborder" placeholder="Miasto startowe" />
+<input type = "number_1" name = "Miejsce_startu" class = "inputborder_1" placeholder="Miasto startowe" />
 <?php
 		
 				if(isset($_SESSION['e_start']))
@@ -91,7 +120,7 @@ session_start();
 </div>
 
 <div id="cel" >
-<input type = "text" name = "Miejsce_docelowe" class = "inputborder" placeholder="Miasto docelowe" />
+<input type = "number_1" name = "Miejsce_docelowe" class = "inputborder_1" placeholder="Miasto docelowe" />
 <?php
 		
 				if(isset($_SESSION['e_cel']))
@@ -110,7 +139,7 @@ session_start();
 
 
 <div id="cena">
-<input type = "text" name = "Cena" class = "cena" placeholder="Podaj cene" />
+<input type = "number_1" name = "Cena" class = "cena" placeholder="Podaj cene" />
 <?php
 		
 				if(isset($_SESSION['e_cena']))
@@ -128,7 +157,7 @@ session_start();
 </div>
 
 <div id="waga">
-<input type = "text" name = "Waga" class = "waga" placeholder="Podaj wagę towaru w kg" />
+<input type = "number_1" name = "Waga" class = "waga" placeholder="Podaj wagę towaru w kg" />
 <?php
 		
 				if(isset($_SESSION['e_waga']))
@@ -166,23 +195,21 @@ session_start();
 
 <div id="send_photos">
 <br/>
+<br/>
 
-<form action="upload.php" method="post" enctype="multipart/form-data">
 	Wybierz zdjęcia:
 		<input type="file" name="photo" id="zdjecieup">
-		<input type="file" name="photo" id="zdjecieup">
-		<input type="file" name="photo" id="zdjecieup">
-		<input type="file" name="photo" id="zdjecieup">
-		<input type="file" name="photo" id="zdjecieup">
-		<input type="submit" value="Upload Image" name="submit">
 		
 		
-</form>
+		
+		
+
 <div id="send_button">
 <br/>
 <br/>
 <br/>
- <button class="button4" style="vertical-align:middle"><span>Dodaj ogłoszenie </span></button>
+
+ <input type="submit" class="addbtn" value="Dodaj Oferte" name="submit">
  
 </div>
 </div>	
