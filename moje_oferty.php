@@ -1,4 +1,10 @@
-﻿<?php
+﻿/* oferty użytkownika
+* do zmiany: tabele uslugi i oferty (zmiana adresu na wspolrzedne geograficzne)
+* 
+*/
+
+
+<?php
 	session_start();
 
 ?>

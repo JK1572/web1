@@ -1,3 +1,10 @@
+/* 
+*baza danych oferty - prawdopodobnie zmiana lokalizacji na wspolrzedne geograficzne
+*
+*
+*
+*/
+
 <?php
 
 session_start();

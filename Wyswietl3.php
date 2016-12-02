@@ -1,4 +1,12 @@
-﻿<?php
+﻿/*
+*Zmiana geokodowania
+*obliczanie odlelosci i zasieg
+*czy potrzebne?
+*/
+
+
+
+<?php
 	session_start();
 
 ?>

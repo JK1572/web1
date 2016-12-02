@@ -1,3 +1,11 @@
+/*
+* (Chyba tworzenie konta) 
+* Zmiany do bazy danych wprowadzone
+* Do sprawdzenia
+*/
+
+
+
 <?php
 	session_start();
 	
@@ -19,7 +27,7 @@
 		else
 				{
 					
-					$rezultat=$polaczenie->query("SELECT ID FROM users WHERE email = '$email'");
+					$rezultat=$polaczenie->query("SELECT ID FROM users_general WHERE email = '$email'");
 					
 					if(!$rezultat) throw new Exception($polaczenie->error);
 					
@@ -35,7 +43,7 @@
 						
 				if($wszystko_OK==true)
 					{
-						if($polaczenie->query("INSERT INTO users(email,Haslo,rodzajkonta) VALUES('$email','$haslo_hash','$rkonta')"))
+						if($polaczenie->query("INSERT INTO users_general(email,haslo,rodzaj) VALUES('$email','$haslo_hash','$rkonta')"))
 						{
 							$_SESSION['udanarejestracja']=true;
 							header('Location: welcome.php ');

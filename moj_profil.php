@@ -1,4 +1,11 @@
-﻿<?php
+﻿/*Moje konto
+*Wprowadzone zmiany w bazie danych
+*Potrzebne zmiany: odczytywanie adresu na bazie dlugosci i szerokosci geograficznej
+*do sprawdzenia
+*/
+
+
+<?php
 	session_start();
 
 ?>
@@ -93,7 +100,7 @@
 		else
 				{
 					
-					$rezultat=$polaczenie->query("SELECT * FROM daneusers WHERE  iduser = '$user'");
+					$rezultat=$polaczenie->query("SELECT * FROM users_genereal WHERE  id = '$user'");
 					
 					if(!$rezultat) throw new Exception($polaczenie->error);
 					
@@ -103,9 +110,9 @@
 						$wiersz = $rezultat->fetch_assoc();
 						
 						$_SESSION['imie'] = $wiersz['imie'];
-						$_SESSION['nazwisko'] = $wiersz['nazwisko'];
-						$_SESSION['adres'] = $wiersz['adres'];
-						$_SESSION['wojewodztwo'] = $wiersz['wojewodztwo'];
+						$_SESSION['nazwisko'] = $wiersz['nazwisko'];  
+						$_SESSION['adres'] = $wiersz['adres']; // do zmiany, geokodowanie
+						$_SESSION['wojewodztwo'] = $wiersz['wojewodztwo'];// do zmiany, geokodowanie
 						$_SESSION['telefon'] = $wiersz['telefon'];
 					}	
 						else

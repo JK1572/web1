@@ -1,4 +1,11 @@
-﻿<?php
+﻿/* 
+*baza danych uslugi - prawdopodobnie zmiana lokalizacji na wspolrzedne geograficzne
+*
+*
+*
+*/
+
+<?php
 
 session_start();
 

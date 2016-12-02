@@ -1,3 +1,8 @@
+/* zmiana bazy danych
+* do sprawdzenia
+*/
+
+
 <?php
 
 	session_start();
@@ -28,7 +33,7 @@
 		
 		
 		
-			if($rezultat = @$polaczenie->query(sprintf("SELECT * FROM users WHERE email = '%s'",
+			if($rezultat = @$polaczenie->query(sprintf("SELECT * FROM users_general WHERE email = '%s'",
 				mysqli_real_escape_string($polaczenie,$login))))
 		{
 			$ilu_userow = $rezultat->num_rows;
